@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Tiger Martial Arts - Training in Karate, Taekwondo, Muay Thai, BJJ & Self-defense. Join our family of strength and discipline.">
+  <meta name="keywords" content="Martial Arts, Karate, Taekwondo, Fitness, Self Defense, Muay Thai, Gym, BJJ, Tiger Martial Arts">
+  <meta name="author" content="Tiger Martial Arts Web Team">
+  <title>Tiger Martial Arts</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #fca311;
+    }
+    nav {
+      background: #fca311;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      position: relative;
+      background: url('https://t3.ftcdn.net/jpg/09/85/34/06/360_F_985340695_QgDTpZpxMkkNjEjgGEip08y36wbNLUO3.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .hero h2 {
+      font-size: 3em;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h3 {
+      font-size: 2em;
+      color: #fca311;
+      margin-bottom: 20px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .feature {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      flex: 1 1 45%;
+      padding: 20px;
+    }
+    .feature img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .feature h4 {
+      margin-top: 15px;
+      color: #14213d;
+    }
+    .about-image {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .class-list {
+      list-style: none;
+      padding: 0;
+    }
+    .class-list li {
+      background: white;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .class-list li h4 {
+      margin: 0 0 10px 0;
+      color: #fca311;
+    }
+    .class-list li p {
+      margin: 0;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #fca311;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    table th {
+      background: #fca311;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #14213d;
+      color: white;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .hidden {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Tiger Martial Arts</h1>
+  <p>Strength, Discipline, Respect</p>
+</header>
+
+<nav>
+  <a onclick="showSection('home')">Home</a>
+  <a onclick="showSection('about')">About</a>
+  <a onclick="showSection('classes')">Classes</a>
+  <a onclick="showSection('membership')">Membership</a>
+  <a onclick="showSection('contact')">Contact</a>
+</nav>
+
+<!-- Home Section -->
+<div id="home">
+  <div class="hero">
+    <h2>Unleash Your Inner Tiger</h2>
+  </div>
+  <section class="section">
+    <h3>Welcome to Tiger Martial Arts</h3>
+    <p>
+      We are more than just a gym. Tiger Martial Arts is a community of discipline, focus and personal growth. Whether you’re a beginner or a seasoned fighter, our expert instructors will guide you every step of the way.
+    </p>
+  </section>
+  <section class="section">
+    <h3>What We Offer</h3>
+    <div class="features">
+      <div class="feature">
+        <img src="https://pursueit-prod.s3.me-central-1.amazonaws.com/uploads/activity-feature-image/thumb/935961579158082.webp" alt="Martial Arts Training">
+        <h4>Martial Arts Training</h4>
+        <p>Karate, Taekwondo, Muay Thai, Jiu-Jitsu and more from expert instructors.</p>
+      </div>
+      <div class="feature">
+        <img src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_606,w_4608,h_2304,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-residency-towers-rameswaram/EXP01371-Enhanced-NR-Edit_wxtwuh" alt="Fitness Gym">
+        <h4>Modern Fitness Gym</h4>
+        <p>Strength & cardio equipment to stay in peak condition.</p>
+      </div>
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80" alt="Sauna and Steam">
+        <h4>Relaxation Facilities</h4>
+        <p>Sauna, steam room, changing rooms & showers available.</p>
+      </div>
+      <div class="feature">
+        <img src="https://jkleeblackbelt.com/wp-content/uploads/2018/08/Self-Defense-Image1.jpg" alt="Self Defense">
+        <h4>Self Defense Courses</h4>
+        <p>Learn practical, real-world self-defense skills.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- About Section -->
+<div id="about" class="hidden">
+  <section class="section">
+    <h3>About Us</h3>
+    <p>
+      Founded over a decade ago, Tiger Martial Arts empowers individuals through martial arts, fitness, and discipline. Our family-friendly environment helps you grow in strength and character.
+    </p>
+    <img src="https://thekaratedojo.com/wp-content/uploads/2014/07/2018-Team-1024x531.jpg" alt="Dojo Team" class="about-image">
+  </section>
+</div>
+
+<!-- Classes Section -->
+<div id="classes" class="hidden">
+  <section class="section">
+    <h3>Our Classes</h3>
+    <ul class="class-list">
+      <li><h4>Beginner Karate - £25/month</h4><p>Introductory martial arts class with 2 sessions/week.</p></li>
+      <li><h4>Intermediate Taekwondo - £35/month</h4><p>3 sessions/week with forms and strength training.</p></li>
+      <li><h4>Advanced Muay Thai - £45/month</h4><p>5 sessions/week covering advanced strikes & combos.</p></li>
+      <li><h4>BJJ (Brazilian Jiu-Jitsu) - £45/month</h4><p>Ground fighting and submission training.</p></li>
+      <li><h4>Self-Defense Workshops - £15/session</h4><p>1-hour focused sessions for confidence & safety.</p></li>
+    </ul>
+  </section>
+</div>
+
+<!-- Membership Section -->
+<div id="membership" class="hidden">
+  <section class="section">
+    <h3>Membership Registration</h3>
+    <form aria-label="Membership Form">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <label for="membershipType">Membership Type:</label>
+      <select id="membershipType" name="membershipType" required>
+        <option value="">-- Select a Plan --</option>
+        <option>Basic - £25/month</option>
+        <option>Intermediate - £35/month</option>
+        <option>Advanced - £45/month</option>
+        <option>Elite - £60/month</option>
+        <option>Private Tuition - £15/hour</option>
+        <option>Junior - £25/month</option>
+      </select>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <h3 style="margin-top:40px;">Membership Options and Pricing</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Membership Type</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Basic (1 martial art – 2 sessions/week)</td><td>£25.00/month</td></tr>
+        <tr><td>Intermediate (1 martial art – 3 sessions/week)</td><td>£35.00/month</td></tr>
+        <tr><td>Advanced (any 2 martial arts – 5 sessions/week)</td><td>£45.00/month</td></tr>
+        <tr><td>Elite (Unlimited classes)</td><td>£60.00/month</td></tr>
+        <tr><td>Private martial arts tuition</td><td>£15.00/hour</td></tr>
+        <tr><td>Junior membership (all-kids sessions)</td><td>£25.00/month</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="hidden">
+  <section class="section">
+    <h3>Contact Us</h3>
+    <form aria-label="Contact Form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="contactEmail">Email:</label>
+      <input type="email" id="contactEmail" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 Tiger Martial Arts. All rights reserved.</p>
+  <p>
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a> |
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a> |
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a>
+  </p>
+</footer>
+
+<script>
+  function showSection(sectionId) {
+    const sections = ['home', 'about', 'classes', 'membership', 'contact'];
+    sections.forEach(id => {
+      document.getElementById(id).classList.add("hidden");
+    });
+    document.getElementById(sectionId).classList.remove("hidden");
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
